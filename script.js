@@ -4,9 +4,8 @@ var body = document.querySelector("body");
 var h3 = document.querySelector("h3");
 
 function updateGradient() {
-    var gradient = `linear-gradient(to right, ${leftColor.value} , ${rightColor.value})`
-    body.style.background = gradient;
-    h3.textContent = gradient;
+    body.style.background = `linear-gradient(to right, ${leftColor.value} , ${rightColor.value})`
+    h3.textContent = body.style.background;
 }
 
 leftColor.addEventListener("input", updateGradient);
